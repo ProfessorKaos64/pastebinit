@@ -21,7 +21,9 @@ defaultPB = "http://pastebin.com" #Default pastebin
 try:
     import lsb_release
     release = lsb_release.get_distro_information()['ID'].lower()
-    if release == 'debian':
+    if release == 'steamos':
+        defaultPB = "http://paste.debian.net"
+    elif release == 'debian':
         defaultPB = "http://paste.debian.net"
     elif release == 'fedora':
         defaultPB = "http://fpaste.org"
